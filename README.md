@@ -1,10 +1,24 @@
+# Important announcement
+
+> [!IMPORTANT] 
+> Please migrate your projects to use [@hey-api/openapi-ts](https://github.com/hey-api/openapi-ts)
+
+Due to time limitations on my end, this project has been unmaintained for a while now. The `@hey-api/openapi-ts`
+project started as a fork with the goal to resolve the most pressing issues. going forward they are planning to
+maintain the OpenAPI generator and give it the love it deserves. Please support them with their work and make
+sure to migrate your projects: https://heyapi.vercel.app/openapi-ts/migrating.html
+
+- All open PR's and issues will be archived on the 1st of May 2024
+- All versions of this package will be deprecated in NPM
+
+👋 Thanks for all the support, downloads and love! Cheers Ferdi.
+
+---
+
 # OpenAPI Typescript Codegen
 
 [![NPM][npm-image]][npm-url]
 [![License][license-image]][license-url]
-[![Coverage][coverage-image]][coverage-url]
-[![Quality][quality-image]][quality-url]
-[![Code Climate][climate-image]][climate-url]
 [![Downloads][downloads-image]][downloads-url]
 [![Build][build-image]][build-url]
 
@@ -14,7 +28,7 @@
 - Frontend ❤️ OpenAPI, but we do not want to use JAVA codegen in our builds
 - Quick, lightweight, robust and framework-agnostic 🚀
 - Supports generation of TypeScript clients
-- Supports generations of Fetch, [Node-Fetch](#node-fetch-support), [Axios](#axios-support), [Angular](#angular-support) and XHR http clients
+- Supports generations of Fetch, Node-Fetch, Axios, Angular and XHR http clients
 - Supports OpenAPI specification v2.0 and v3.0
 - Supports JSON and YAML files for input
 - Supports generation through CLI, Node.js and NPX
@@ -60,25 +74,19 @@ $ openapi-typescript-codegen --help
 
 Documentation
 ===
-- [Basic usage](docs/basic-usage.md)
-- [OpenAPI object](docs/openapi-object.md)
-- [Client instances](docs/client-instances.md) `--name`
-- [Argument vs. Object style](docs/arguments-vs-object-style.md) `--useOptions`
-- [Enums vs. Union types](docs/enum-vs-union-types.md) `--useUnionTypes`
-- [Runtime schemas](docs/runtime-schemas.md) `--exportSchemas`
-- [Enum with custom names and descriptions](docs/custom-enums.md)
-- [Nullable props (OpenAPI v2)](docs/nullable-props.md)
-- [Authorization](docs/authorization.md)
-- [External references](docs/external-references.md)
-- [Canceling requests](docs/canceling-requests.md)
-- [Custom request file](docs/custom-request-file.md)
 
-Support
+The main documentation can be found in the [openapi-typescript-codegen/wiki](https://github.com/ferdikoomen/openapi-typescript-codegen/wiki)
+
+Sponsors
 ===
-- [Babel support](docs/babel-support.md)
-- [Axios support](docs/axios-support.md)
-- [Angular support](docs/angular-support.md)
-- [Node-Fetch support](docs/node-fetch-support.md)
+
+If you or your company use the OpenAPI Typescript Codegen, please consider supporting me. By sponsoring I can free up time to give this project some love! Details can be found here: https://github.com/sponsors/ferdikoomen
+
+If you're from an enterprise looking for a fully managed SDK generation, please consider our sponsor:
+
+<a href="https://speakeasyapi.dev/?utm_source=ferdi+repo&utm_medium=github+sponsorship">
+    <img alt="speakeasy" src="https://storage.googleapis.com/speakeasy-design-assets/ferdi-sponsorship.png" width="640"/>
+</a>
 
 [npm-url]: https://npmjs.org/package/openapi-typescript-codegen
 [npm-image]: https://img.shields.io/npm/v/openapi-typescript-codegen.svg
@@ -86,11 +94,7 @@ Support
 [license-image]: http://img.shields.io/npm/l/openapi-typescript-codegen.svg
 [coverage-url]: https://codecov.io/gh/ferdikoomen/openapi-typescript-codegen
 [coverage-image]: https://img.shields.io/codecov/c/github/ferdikoomen/openapi-typescript-codegen.svg
-[quality-url]: https://lgtm.com/projects/g/ferdikoomen/openapi-typescript-codegen
-[quality-image]: https://img.shields.io/lgtm/grade/javascript/g/ferdikoomen/openapi-typescript-codegen.svg
-[climate-url]: https://codeclimate.com/github/ferdikoomen/openapi-typescript-codegen
-[climate-image]: https://img.shields.io/codeclimate/maintainability/ferdikoomen/openapi-typescript-codegen.svg
 [downloads-url]: http://npm-stat.com/charts.html?package=openapi-typescript-codegen
 [downloads-image]: http://img.shields.io/npm/dm/openapi-typescript-codegen.svg
-[build-url]: https://circleci.com/gh/ferdikoomen/openapi-typescript-codegen/tree/master
-[build-image]: https://circleci.com/gh/ferdikoomen/openapi-typescript-codegen/tree/master.svg?style=svg
+[build-url]: https://circleci.com/gh/ferdikoomen/openapi-typescript-codegen/tree/main
+[build-image]: https://circleci.com/gh/ferdikoomen/openapi-typescript-codegen/tree/main.svg?style=svg

@@ -1,4 +1,4 @@
-const getHeaders = (config: OpenAPIConfig, options: ApiRequestOptions): Observable<HttpHeaders> => {
+export const getHeaders = (config: OpenAPIConfig, options: ApiRequestOptions): Observable<HttpHeaders> => {
 	return forkJoin({
 		token: resolve(options, config.TOKEN),
 		username: resolve(options, config.USERNAME),
@@ -26,7 +26,7 @@ const getHeaders = (config: OpenAPIConfig, options: ApiRequestOptions): Observab
 				headers['Authorization'] = `Basic ${credentials}`;
 			}
 
-			if (options.body) {
+			if (options.body !== undefined) {
 				if (options.mediaType) {
 					headers['Content-Type'] = options.mediaType;
 				} else if (isBlob(options.body)) {
